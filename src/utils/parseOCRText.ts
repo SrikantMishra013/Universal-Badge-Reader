@@ -17,8 +17,6 @@ export function parseOCRText(text: string): ParsedVisitor {
   const emailMatch = email.match(emailRegex);
   const finalEmail = emailMatch ? emailMatch[0] : "";
 
-  console.log(lines, finalEmail);
-
   const name = lines[0] || "Unknown";
   const mobile =
     lines.find((line) => line === line.toUpperCase() && line !== finalEmail) ||
